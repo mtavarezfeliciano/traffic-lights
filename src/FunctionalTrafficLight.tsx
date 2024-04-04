@@ -5,7 +5,10 @@ export const FunctionalTrafficLight: React.FC = () => {
   const [status, setStatus] = useState('red');
   const checkStatus = (color: string) => (status === color ? color: 'black');
   const nextColor = () => {
-    setStatus(status === 'red' ? 'yellow' : status === 'yellow' ? 'green' : 'red');
+    // setStatus(status === 'red' ? 'yellow' : status === 'yellow' ? 'green' : 'red');
+    if (status === 'red') {setStatus('green')};
+    if (status === 'green') {setStatus('yellow')};
+    if (status === 'yellow') {setStatus('red')};
   }
 
   return (
