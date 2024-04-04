@@ -8,7 +8,7 @@ export class ClassTrafficLight extends Component {
 
   checkStatus = (color: string) => (this.state.status === color ? color: 'black');
   nextColor = () => {
-    this.setState({status: this.state.status === 'red' ? 'yellow' : this.state.status === 'yellow' ? 'green' : 'red'})
+    this.setState({status: this.state.status === 'red' ? 'green' : this.state.status === 'green' ? 'yellow' : 'red'})
   }
 
   render() {
